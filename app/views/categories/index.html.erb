@@ -1,5 +1,5 @@
 <br>
-<br>
+<br>  
 <div class="container">
   <div class="leftbar">
     <a href="#"><h1>PetsList</h1></a>
@@ -23,157 +23,143 @@
       </button>
     </form>
   </div>
+
   <div class="center-column" >
     <div class="center-one">
+
       <table>
         <tr>
-          <th class="table-header">Dogs</th> 
+          <th class="table-header"><%= link_to 'cats' %></th> 
         </tr>
         <tr>
           <td>
-            <ul class="left-list">
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-            </ul>
-            <ul class="right-list">
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-      <table>
-        <tr>
-          <th class="table-header">Cats</th>
-        </tr>
-        <tr>
-          <td>
+          <% @cat.subcategories.each do |subcategory| %>
             <ul>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+              <li><%= link_to subcategory.name %></li>
             </ul>
+            <% end %>
           </td>
         </tr>
       </table>
+
       <table>
         <tr>
-          <th class="table-header">Small animals</th>
+          <th class="table-header"><%= link_to 'horses' %></th>
         </tr>
         <tr>
           <td>
-            <ul class="left-list">
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+          <% @horse.subcategories.each do |subcategory| %>
+            <ul>
+              <li><%= link_to subcategory.name%></li>
             </ul>
-            <ul class="right-list">
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-            </ul>
+            <% end %>
           </td>
         </tr>
       </table>
     </div>
+
+
     <div class="center-two">
-      <table>
+    
+    <table>
         <tr>
-          <th class="table-header">Fish</th>
+          <th class="table-header"><%= link_to 'dogs' %></th> 
         </tr>
         <tr>
           <td>
+          <% @dog.subcategories.each do |subcategory| %>
             <ul>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+              <li><%= link_to subcategory.name %></li>
             </ul>
+            <% end %>
           </td>
         </tr>
       </table>
+
       <table>
         <tr>
-          <th class="table-header">Birds</th>
+          <th class="table-header"><%= link_to 'fish' %></th>
         </tr>
         <tr>
           <td>
-            <ul class="left-list">
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+           <% @fish.subcategories.each do |subcategory| %>
+            <ul>
+              <li><%= link_to subcategory.name %></li>
             </ul>
-            <ul class="right-list">
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th class="table-header"><%= link_to 'other'%></th>
+        </tr>
+        <tr>
+          <td>
+          <% @other.subcategories.each do |subcategory| %>
+            <ul>
+              <li><%= link_to subcategory.name %></li>          
             </ul>
+            <% end %>
           </td>
         </tr>
       </table>
     </div>
+
     <div class="center-three">
+
       <table>
         <tr>
-          <th class="table-header">Horses</th>
+          <th class="table-header"><%= link_to 'small animals'%></th>
         </tr>
         <tr>
           <td>
+          <% @smanimal.subcategories.each do |subcategory| %>
             <ul>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
-              <li>test</li>
+              <li><%= link_to subcategory.name %></li>          
             </ul>
+            <% end %>
           </td>
         </tr>
       </table>
+      <br>
+
+      <table>
+        <tr>
+          <th class="table-header"><%= link_to 'birds'%></th>
+        </tr>
+        <tr>
+          <td>
+          <% @bird.subcategories.each do |subcategory| %>
+            <ul>
+              <li><%= link_to subcategory.name %></li>          
+            </ul>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+      <br>
+
+      <table>
+        <tr>
+          <th class="table-header"><%= link_to 'reptiles'%></th>
+        </tr>
+        <tr>
+          <td>
+          <% @reptile.subcategories.each do |subcategory| %>
+            <ul>
+              <li><%= link_to subcategory.name %></li>          
+            </ul>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+
     </div>
   </div>
+
+
   <div class="rightbar">
     <ul class="rightbar-top">
       <li><%=link_to 'help and faq', help_path%></li>
