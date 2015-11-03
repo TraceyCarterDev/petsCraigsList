@@ -4,7 +4,7 @@
   <div class="leftbar">
     <a href="#"><h1>PetsList</h1></a>
     <ul>
-      <a href="#">post to classifieds</a>
+      <%= link_to 'Create a new post', new_listing_path %>
       <li>my account</li>
     </ul>
     <form>
@@ -14,10 +14,14 @@
       <input type="text" name="firstname" placeholder="where" size="20">
       <br>
       <select>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+        <option value="volvo">Dogs</option>
+        <option value="saab">Cats</option>
+        <option value="mercedes">Small Animals</option>
+        <option value="audi">Fish</option>
+        <option value="volvo">Birds</option>
+        <option value="saab">Horses</option>
+        <option value="mercedes">Reptiles/Amphibians</option>
+        <option value="audi">Other</option>
       </select>
       <button type="button">>
       </button>
@@ -29,13 +33,13 @@
 
       <table>
         <tr>
-          <th class="table-header"><%= link_to 'cats' %></th> 
+          <th class="table-header"><%= link_to 'cats', category_path(@cat) %></th> 
         </tr>
         <tr>
           <td>
           <% @cat.subcategories.each do |subcategory| %>
             <ul>
-              <li><%= link_to subcategory.name %></li>
+              <li><%= link_to subcategory.name, category_subcategory_path(@cat, subcategory) %></li>
             </ul>
             <% end %>
           </td>
@@ -44,13 +48,13 @@
 
       <table>
         <tr>
-          <th class="table-header"><%= link_to 'horses' %></th>
+          <th class="table-header"><%= link_to 'horses', category_path(@horse) %></th>
         </tr>
         <tr>
           <td>
           <% @horse.subcategories.each do |subcategory| %>
             <ul>
-              <li><%= link_to subcategory.name%></li>
+              <li><%= link_to subcategory.name, category_subcategory_path(@horse, subcategory) %></li>
             </ul>
             <% end %>
           </td>
@@ -63,13 +67,13 @@
     
     <table>
         <tr>
-          <th class="table-header"><%= link_to 'dogs' %></th> 
+          <th class="table-header"><%= link_to 'dogs', category_path(@horse) %></th> 
         </tr>
         <tr>
           <td>
           <% @dog.subcategories.each do |subcategory| %>
             <ul>
-              <li><%= link_to subcategory.name %></li>
+              <li><%= link_to subcategory.name, category_subcategory_path(@dog, subcategory)  %></li>
             </ul>
             <% end %>
           </td>
@@ -78,28 +82,13 @@
 
       <table>
         <tr>
-          <th class="table-header"><%= link_to 'fish' %></th>
+          <th class="table-header"><%= link_to 'birds', category_path(@bird) %></th>
         </tr>
         <tr>
           <td>
-           <% @fish.subcategories.each do |subcategory| %>
+           <% @bird.subcategories.each do |subcategory| %>
             <ul>
-              <li><%= link_to subcategory.name %></li>
-            </ul>
-            <% end %>
-          </td>
-        </tr>
-      </table>
-
-      <table>
-        <tr>
-          <th class="table-header"><%= link_to 'other'%></th>
-        </tr>
-        <tr>
-          <td>
-          <% @other.subcategories.each do |subcategory| %>
-            <ul>
-              <li><%= link_to subcategory.name %></li>          
+              <li><%= link_to subcategory.name, category_subcategory_path(@bird, subcategory)  %></li>
             </ul>
             <% end %>
           </td>
@@ -111,13 +100,13 @@
 
       <table>
         <tr>
-          <th class="table-header"><%= link_to 'small animals'%></th>
+          <th class="table-header"><%= link_to 'small animals', category_path(@smanimal) %></th>
         </tr>
         <tr>
           <td>
           <% @smanimal.subcategories.each do |subcategory| %>
             <ul>
-              <li><%= link_to subcategory.name %></li>          
+              <li><%= link_to subcategory.name, category_subcategory_path(@smanimal, subcategory)  %></li>          
             </ul>
             <% end %>
           </td>
@@ -127,13 +116,13 @@
 
       <table>
         <tr>
-          <th class="table-header"><%= link_to 'birds'%></th>
+          <th class="table-header"><%= link_to 'fish', category_path(@fish) %></th>
         </tr>
         <tr>
           <td>
-          <% @bird.subcategories.each do |subcategory| %>
+          <% @fish.subcategories.each do |subcategory| %>
             <ul>
-              <li><%= link_to subcategory.name %></li>          
+              <li><%= link_to subcategory.name, category_subcategory_path(@fish, subcategory)  %></li>          
             </ul>
             <% end %>
           </td>
@@ -143,13 +132,28 @@
 
       <table>
         <tr>
-          <th class="table-header"><%= link_to 'reptiles'%></th>
+          <th class="table-header"><%= link_to 'reptiles', category_path(@reptile) %></th>
         </tr>
         <tr>
           <td>
           <% @reptile.subcategories.each do |subcategory| %>
             <ul>
-              <li><%= link_to subcategory.name %></li>          
+              <li><%= link_to subcategory.name, category_subcategory_path(@reptile, subcategory)  %></li>          
+            </ul>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+<br>
+      <table>
+        <tr>
+          <th class="table-header"><%= link_to 'other', category_path(@other) %></th>
+        </tr>
+        <tr>
+          <td>
+          <% @other.subcategories.each do |subcategory| %>
+            <ul>
+              <li><%= link_to subcategory.name, category_subcategory_path(@other, subcategory)  %></li>          
             </ul>
             <% end %>
           </td>

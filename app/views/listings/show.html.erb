@@ -1,0 +1,23 @@
+<div class="topbar">
+  <div class="container">
+    <div class="vertical-center">
+      <%= link_to 'PetsList', root_path %> > NextThing
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div>
+    <button type="button">reply</button>
+    <p>posted: <%= time_ago_in_words(@listing.created_at) %> ago</p>
+    <h1 class="listing-header"><%= @listing.title %></h1>
+    <div class="box">
+      <p>test</p>
+    </div>
+    <p><%= @listing.description %>
+    </p>
+  </div>
+  <footer>
+    <p>post id: <%= @listing.id %></p>
+    <p>posted: <%= time_ago_in_words(@listing.created_at) %> ago</p>
+  </footer>
+</div>

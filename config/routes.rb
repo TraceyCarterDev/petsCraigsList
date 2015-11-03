@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :subcategories
   end
 
+  resources :listings
+
   # You can have the root of your site routed with "root"
   root 'categories#index'
 
@@ -15,6 +17,7 @@ Rails.application.routes.draw do
   match '/privacy', to: 'static_pages#privacy', via: :get 
   match '/about', to: 'static_pages#about', via: :get 
   match '/contact', to: 'static_pages#contact', via: :get 
+  match '/subcategories/find_by_category', to: 'subcategories#find_by_category', via: :post
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
