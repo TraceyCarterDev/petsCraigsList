@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151030191254) do
+ActiveRecord::Schema.define(version: 20151103205819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,10 @@ ActiveRecord::Schema.define(version: 20151030191254) do
     t.integer  "zipcode"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "category_id"
+    t.integer  "subcategory_id"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "subcategories", force: :cascade do |t|
