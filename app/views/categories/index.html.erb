@@ -7,25 +7,13 @@
       <%= link_to 'Create a new post', new_listing_path %>
       <li>my account</li>
     </ul>
-    <form>
+      <%= form_tag search_listings_path, method: :get do |f| %>
       <p>search PetsList</p>
-      <input type="text" name="firstname" placeholder="search" size="20">
-      <br>
-      <input type="text" name="firstname" placeholder="where" size="20">
-      <br>
-      <select>
-        <option value="volvo">Dogs</option>
-        <option value="saab">Cats</option>
-        <option value="mercedes">Small Animals</option>
-        <option value="audi">Fish</option>
-        <option value="volvo">Birds</option>
-        <option value="saab">Horses</option>
-        <option value="mercedes">Reptiles/Amphibians</option>
-        <option value="audi">Other</option>
-      </select>
-      <button type="button">>
-      </button>
-    </form>
+        <%= text_field_tag :search, nil, placeholder: 'search' %>
+        <%= text_field_tag :location, nil, placeholder: 'near' %>
+        <%= select_tag :category, options_for_select(Category.all.map{ |c| [c.name, c.id]}) %>
+        <%= submit_tag '>' %>
+      <% end %>
   </div>
 
   <div class="center-column" >

@@ -19,7 +19,6 @@ reptile_category = Category.where(name: 'reptile').first_or_create(name: 'reptil
 Subcategory.where(name: 'adoptable', category_id: cat_category.id).first_or_create(name: 'adoptable', category_id: cat_category.id)
 Subcategory.where(name: 'boarding', category_id: cat_category.id).first_or_create(name: 'boarding', category_id: cat_category.id)
 Subcategory.where(name: 'neuter', category_id: cat_category.id).first_or_create(name: 'neuter', category_id: cat_category.id)
-
 Subcategory.where(name: 'missing', category_id: cat_category.id).first_or_create(name: 'missing', category_id: cat_category.id)
 Subcategory.where(name: 'supplies', category_id: cat_category.id).first_or_create(name: 'supplies', category_id: cat_category.id)
 Subcategory.where(name: 'transportation', category_id: cat_category.id).first_or_create(name: 'transportation', category_id: cat_category.id)
@@ -28,7 +27,6 @@ Subcategory.where(name: 'vaccinations', category_id: cat_category.id).first_or_c
 Subcategory.where(name: 'veterinarians', category_id: cat_category.id).first_or_create(name: 'veterinarians', category_id: cat_category.id)
 Subcategory.where(name: 'portraits', category_id: cat_category.id).first_or_create(name: 'portraits', category_id: cat_category.id)
 Subcategory.where(name: 'blog', category_id: cat_category.id).first_or_create(name: 'blog', category_id: cat_category.id)
-
 
 
 Subcategory.where(name: 'adoptable', category_id: horse_category.id).first_or_create(name: 'adoptable', category_id: horse_category.id)
@@ -45,7 +43,6 @@ Subcategory.where(name: 'portraits', category_id: horse_category.id).first_or_cr
 Subcategory.where(name: 'blog', category_id: horse_category.id).first_or_create(name: 'blog', category_id: horse_category.id)
 
 
-
 Subcategory.where(name: 'adoptable', category_id: dog_category.id).first_or_create(name: 'adoptable', category_id: dog_category.id)
 Subcategory.where(name: 'boarding', category_id: dog_category.id).first_or_create(name: 'boarding', category_id: dog_category.id)
 Subcategory.where(name: 'walkers', category_id: dog_category.id).first_or_create(name: 'walkers', category_id: dog_category.id)
@@ -60,7 +57,6 @@ Subcategory.where(name: 'vaccinations', category_id: dog_category.id).first_or_c
 Subcategory.where(name: 'veterinarians', category_id: dog_category.id).first_or_create(name: 'veterinarians', category_id: dog_category.id)
 Subcategory.where(name: 'portraits', category_id: dog_category.id).first_or_create(name: 'portraits', category_id: dog_category.id)
 Subcategory.where(name: 'blog', category_id: dog_category.id).first_or_create(name: 'blog', category_id: dog_category.id)
-
 
 
 Subcategory.where(name: 'adoptable', category_id: fish_category.id).first_or_create(name: 'adoptable', category_id: fish_category.id)
@@ -80,7 +76,6 @@ Subcategory.where(name: 'supplies', category_id: smanimal_category.id).first_or_
 Subcategory.where(name: 'veterinarians', category_id: smanimal_category.id).first_or_create(name: 'veterinarians', category_id: smanimal_category.id)
 Subcategory.where(name: 'portraits', category_id: smanimal_category.id).first_or_create(name: 'portraits', category_id: smanimal_category.id)
 Subcategory.where(name: 'blog', category_id: smanimal_category.id).first_or_create(name: 'blog', category_id: smanimal_category.id)
-
 
 
 Subcategory.where(name: 'adoptable', category_id: bird_category.id).first_or_create(name: 'adoptable', category_id: bird_category.id)

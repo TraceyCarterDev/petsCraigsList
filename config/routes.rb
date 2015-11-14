@@ -5,7 +5,11 @@ Rails.application.routes.draw do
     resources :subcategories
   end
 
-  resources :listings
+  resources :listings do
+    collection do 
+      get 'search'
+    end
+  end
 
   # You can have the root of your site routed with "root"
   root 'categories#index'
