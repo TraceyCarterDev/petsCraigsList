@@ -1,9 +1,7 @@
-This is the SHOW PAGE for subcategory listings!
-
 <div class="topbar">
   <div class="container">
     <div class="vertical-center">
-      petslist > pet > listings
+      <%= link_to 'PetsList', root_path %> > <%= link_to @category.name, @category %> > <%= @subcategory.name %>
     </div>
   </div>
 </div>
@@ -12,8 +10,6 @@ This is the SHOW PAGE for subcategory listings!
   <div class="row">
      <div class="newest">newest</div>
      <div class="oldest">oldest</div>
-     <div class="highest-price">highest-price</div>
-     <div class="lowest-price">lowest-price</div>
    </div>
   <ul class="list-margin">
    <% if @listings.present? %>

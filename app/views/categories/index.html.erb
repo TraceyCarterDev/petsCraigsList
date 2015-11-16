@@ -4,8 +4,17 @@
   <div class="leftbar">
     <a href="#"><h1>PetsList</h1></a>
     <ul>
-      <%= link_to 'Create a new post', new_listing_path %>
-      <li>my account</li>
+      <li><%= link_to 'Create a new post', new_listing_path %></li>
+      <% if user_signed_in? %>
+          <li><%= link_to 'my account', edit_user_registration_path %></li>
+          <li><%= link_to 'log out', destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to 'my listings', mylistings_path %></li>
+
+      <% else %>
+          <li><%= link_to 'sign in', new_user_session_path %></li>
+          <li><%= link_to 'sign up', new_user_registration_path %></li>
+      <% end %>
+
     </ul>
       <%= form_tag search_listings_path, method: :get do |f| %>
       <p>search PetsList</p>
@@ -55,7 +64,7 @@
     
     <table>
         <tr>
-          <th class="table-header"><%= link_to 'dogs', category_path(@horse) %></th> 
+          <th class="table-header"><%= link_to 'dogs', category_path(@dog) %></th> 
         </tr>
         <tr>
           <td>

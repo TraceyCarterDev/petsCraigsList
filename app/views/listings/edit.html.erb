@@ -1,9 +1,10 @@
+<!-- Edit form is same as New form. Automatically prepopulates with current info in the fields somehow -->
 <%= javascript_include_tag 'listings.js' %>
 
 <div class="topbar">
   <div class="container">
-    <div class="vertical-center">
-      <%= link_to 'PetsList', root_path %> > new listing
+    <div class="vertical-center"> 
+      <%= link_to 'PetsList', root_path %> > <%= @category %> > <%= @listing %>
     </div>
   </div>
 </div>

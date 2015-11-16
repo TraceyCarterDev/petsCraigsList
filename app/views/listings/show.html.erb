@@ -1,7 +1,7 @@
 <div class="topbar">
   <div class="container">
     <div class="vertical-center">
-      <%= link_to 'PetsList', root_path %> > NextThing
+      <%= link_to 'PetsList', root_path %> > <%= link_to @listing.category.name, category_path(@listing.category) %> > <%= link_to @listing.subcategory.name, category_subcategory_path(@listing.category, @listing.subcategory) %>
     </div>
   </div>
 </div>
@@ -11,7 +11,12 @@
     <p>posted: <%= time_ago_in_words(@listing.created_at) %> ago</p>
     <h1 class="listing-header"><%= @listing.title %></h1>
     <div class="box">
-      <p>test</p>
+      <% if @listing.user = current_user %>
+        <p> <%= link_to 'edit', edit_listing_path %></p>
+        <p> <%= link_to 'delete', @listing, data: {confirm: "Are you sure you want to delete this?"}, method: :delete %></p>
+      <% end %>
+      <!-- above link to destroy has no path, so we create a delete method by hand with method: :delete -->
+
     </div>
     <p><%= @listing.description %>
     </p>

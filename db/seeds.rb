@@ -15,7 +15,7 @@ smanimal_category = Category.where(name: 'smanimal').first_or_create(name: 'sman
 bird_category = Category.where(name: 'bird').first_or_create(name: 'bird')
 reptile_category = Category.where(name: 'reptile').first_or_create(name: 'reptile')
 
-
+# Cat Subcategories
 Subcategory.where(name: 'adoptable', category_id: cat_category.id).first_or_create(name: 'adoptable', category_id: cat_category.id)
 Subcategory.where(name: 'boarding', category_id: cat_category.id).first_or_create(name: 'boarding', category_id: cat_category.id)
 Subcategory.where(name: 'neuter', category_id: cat_category.id).first_or_create(name: 'neuter', category_id: cat_category.id)
@@ -28,7 +28,7 @@ Subcategory.where(name: 'veterinarians', category_id: cat_category.id).first_or_
 Subcategory.where(name: 'portraits', category_id: cat_category.id).first_or_create(name: 'portraits', category_id: cat_category.id)
 Subcategory.where(name: 'blog', category_id: cat_category.id).first_or_create(name: 'blog', category_id: cat_category.id)
 
-
+# Horse subcategories
 Subcategory.where(name: 'adoptable', category_id: horse_category.id).first_or_create(name: 'adoptable', category_id: horse_category.id)
 Subcategory.where(name: 'boarding', category_id: horse_category.id).first_or_create(name: 'boarding', category_id: horse_category.id)
 Subcategory.where(name: 'missing', category_id: horse_category.id).first_or_create(name: 'missing', category_id: horse_category.id)
@@ -58,17 +58,17 @@ Subcategory.where(name: 'veterinarians', category_id: dog_category.id).first_or_
 Subcategory.where(name: 'portraits', category_id: dog_category.id).first_or_create(name: 'portraits', category_id: dog_category.id)
 Subcategory.where(name: 'blog', category_id: dog_category.id).first_or_create(name: 'blog', category_id: dog_category.id)
 
-
+# Fish subcategories
 Subcategory.where(name: 'adoptable', category_id: fish_category.id).first_or_create(name: 'adoptable', category_id: fish_category.id)
 Subcategory.where(name: 'supplies', category_id: fish_category.id).first_or_create(name: 'supplies', category_id: fish_category.id)
 Subcategory.where(name: 'waste', category_id: fish_category.id).first_or_create(name: 'waste', category_id: fish_category.id)
 Subcategory.where(name: 'veterinarians', category_id: fish_category.id).first_or_create(name: 'veterinarians', category_id: fish_category.id)
 Subcategory.where(name: 'blog', category_id: fish_category.id).first_or_create(name: 'blog', category_id: fish_category.id)
 
-
+# Other subcategories
 Subcategory.where(name: 'all', category_id: other_category.id).first_or_create(name: 'all', category_id: other_category.id)
 
-
+# Smanimal subcategories
 Subcategory.where(name: 'adoptable', category_id: smanimal_category.id).first_or_create(name: 'adoptable', category_id: smanimal_category.id)
 Subcategory.where(name: 'boarding', category_id: smanimal_category.id).first_or_create(name: 'boarding', category_id: smanimal_category.id)
 Subcategory.where(name: 'missing', category_id: smanimal_category.id).first_or_create(name: 'missing', category_id: smanimal_category.id)
@@ -77,7 +77,7 @@ Subcategory.where(name: 'veterinarians', category_id: smanimal_category.id).firs
 Subcategory.where(name: 'portraits', category_id: smanimal_category.id).first_or_create(name: 'portraits', category_id: smanimal_category.id)
 Subcategory.where(name: 'blog', category_id: smanimal_category.id).first_or_create(name: 'blog', category_id: smanimal_category.id)
 
-
+# Bird subcategories
 Subcategory.where(name: 'adoptable', category_id: bird_category.id).first_or_create(name: 'adoptable', category_id: bird_category.id)
 Subcategory.where(name: 'boarding', category_id: bird_category.id).first_or_create(name: 'boarding', category_id: bird_category.id)
 Subcategory.where(name: 'missing', category_id: bird_category.id).first_or_create(name: 'missing', category_id: bird_category.id)
@@ -88,7 +88,7 @@ Subcategory.where(name: 'veterinarians', category_id: bird_category.id).first_or
 Subcategory.where(name: 'portraits', category_id: bird_category.id).first_or_create(name: 'portraits', category_id: bird_category.id)
 Subcategory.where(name: 'blog', category_id: bird_category.id).first_or_create(name: 'blog', category_id: bird_category.id)
 
-
+# Reptile subcategories
 Subcategory.where(name: 'adoptable', category_id: reptile_category.id).first_or_create(name: 'adoptable', category_id: reptile_category.id)
 Subcategory.where(name: 'boarding', category_id: reptile_category.id).first_or_create(name: 'boarding', category_id: reptile_category.id)
 Subcategory.where(name: 'missing', category_id: reptile_category.id).first_or_create(name: 'missing', category_id: reptile_category.id)
