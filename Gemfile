@@ -28,3 +28,7 @@ end
 
   gem 'pg'
   gem 'rails_12factor'
+
+  gem 'carrierwave'
+  gem 'mini_magick'
+  gem 'fog'

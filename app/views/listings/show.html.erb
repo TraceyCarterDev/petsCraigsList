@@ -19,6 +19,9 @@
 
     </div>
     <p><%= @listing.description %>
+    <br>
+    <p><%= image_tag(@listing.picture_url, :width => 500) if @listing.picture.present? %> </p>
+
     </p>
   </div>
   <footer>

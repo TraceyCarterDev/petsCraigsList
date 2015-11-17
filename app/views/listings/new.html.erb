@@ -12,8 +12,12 @@
     <%= form_for @listing do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %>
+    
     <%= f.label :description %>
     <%= f.text_area :description %>
+
+    <%= f.label :picture %>
+    <%= f.file_field :picture %>
   <p>
     <%= f.label :category_id %>
     <%= f.select :category_id, Category.all.map { |f| [f.name, f.id]} %>
@@ -30,6 +34,7 @@
     <%= f.text_field :state %>
     <%= f.label :zipcode %>
     <%= f.text_field :zipcode, class: "zip-width", maxlength: 5 %>
+
 
     <%= f.submit class: "create-button" %>
     <% end %>
