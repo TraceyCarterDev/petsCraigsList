@@ -1,7 +1,9 @@
 <div class="topbar">
   <div class="container">
     <div class="vertical-center">
-      <%= link_to 'petslist', root_path %> > category > subcategory
+      <%= link_to 'PetsList', root_path %> > <%= link_to @listing.category.name, category_path(@listing.category) %> > <%= link_to @listing.subcategory.name, category_subcategory_path(@listing.category, @listing.subcategory) %>
+
+
     </div>
   </div>
 </div>
@@ -11,9 +13,19 @@
     posted: <%= time_ago_in_words(@listing.created_at) %> ago
     <h1 class="listing-header"><%= @listing.title %></h1>
     <div class="box">
-      <p>test</p>
+    <% if @listing.user = current_user %>
+      <p><%= link_to 'edit', edit_listing_path %></p>
+      <p><%= link_to 'delete', @listing, data: {confirm: "Are you sure you want to delete this listing?"}, method: :delete %></p> 
+
+
+
+      <!-- above link for delete has no pre-made path so we made an path by hand method: :delete Also, double checks to make sure person really wants to delete post-->
+    <% end %>
     </div>
-    <p><%= @listing.description %>
+    <p><%= @listing.description %></p>
+    <br>
+    
+    <p><%= image_tag(@listing.picture_url, :width => 500) if @listing.picture.present? %></p>
     </p>
   </div>
   <footer>
