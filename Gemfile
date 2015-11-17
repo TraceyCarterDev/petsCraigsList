@@ -15,6 +15,7 @@ gem 'devise'
 
 gem 'slide-down-alerts-rails'
 
+gem 'rename'
 
 group :development, :test do
   gem 'byebug'
